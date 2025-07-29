@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "758837962399",
+    "project_id": "insightx-d7095",
+    "storage_bucket": "insightx-d7095.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758837962399:android:e168d28b27e61d3aefe4aa",
+        "android_client_info": {
+          "package_name": "com.example.news_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6KPy5QEKhUtedIS_A9du4dvJbeFb0z8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
