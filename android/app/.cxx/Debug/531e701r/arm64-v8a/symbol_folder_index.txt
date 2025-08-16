@@ -1,0 +1,1 @@
+C:\project\flutterproject\news app\news_app\build\app\intermediates\cxx\Debug\531e701r\obj\arm64-v8a

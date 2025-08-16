@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "758837962399",
     "project_id": "insightx-d7095",
-    "storage_bucket": "insightx-d7095.appspot.com"
+    "storage_bucket": "insightx-d7095.firebasestorage.app"
   },
   "client": [
     {
@@ -12,7 +12,20 @@
           "package_name": "com.example.news_app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "758837962399-i1ug162j3l8rkg9ns23aqar7iqvsdnjb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.news_app",
+            "certificate_hash": "a85b14e2baa9d586ce9f63af25f1c00ce13f1263"
+          }
+        },
+        {
+          "client_id": "758837962399-6bnvbhjthvs7o3km3129ue1nlrndb1rk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD6KPy5QEKhUtedIS_A9du4dvJbeFb0z8U"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758837962399-6bnvbhjthvs7o3km3129ue1nlrndb1rk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

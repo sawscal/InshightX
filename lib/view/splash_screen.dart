@@ -1,17 +1,9 @@
-import 'dart:async'; // You need this import for Timer
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:news_app/authentication/signin.dart';
-import 'package:news_app/main.dart';
-
-class START extends StatelessWidget {
-  const START({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
-  }
-}
+import 'package:news_app/view/mainscreen.dart'; // This is your landing/home screen
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -24,15 +16,27 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    _checkLoginStatus();
+  }
 
- 
+  Future<void> _checkLoginStatus() async {
+    final prefs = await SharedPreferences.getInstance();
+    final isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+
+    print("DEBUG: isLoggedIn = $isLoggedIn");
+
     Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-            builder: (context) => Signin() //DashBoardScreen(),
-            ),
-      );
+      if (isLoggedIn) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const Main()),
+        );
+      } else {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const Signin()),
+        );
+      }
     });
   }
 
